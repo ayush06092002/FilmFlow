@@ -95,7 +95,7 @@ fun CreateMovieList(moviesName: String, onClickItem : (String) -> Unit = {  })
             }
             Text(
                 text = moviesName,
-                style = TextStyle(color = Color.Black),
+                style = TextStyle(color = Color.White),
                 textAlign = TextAlign.Center,
                 modifier = Modifier.padding(16.dp)
             )

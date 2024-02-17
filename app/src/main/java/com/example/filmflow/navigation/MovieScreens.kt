@@ -8,6 +8,7 @@ enum class MovieScreens {
         = when (route?.substringBefore("/")) {
             HomeScreen.name -> HomeScreen
             MovieDetailScreen.name -> MovieDetailScreen
+            null -> HomeScreen
             else -> throw IllegalArgumentException("Route $route is not recognized.")
 
         }

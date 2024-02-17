@@ -20,6 +20,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.filmflow.CreateMovieList
+import com.example.filmflow.navigation.MovieScreens
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
@@ -63,7 +64,7 @@ fun MainContent(navController: NavController,moviesList: List<String> = listOf(
             LazyColumn {
                 items(moviesList.size) { index ->
                     CreateMovieList(moviesList[index]) {
-                        Log.d("TAG", "MainContent: " + moviesList[index])
+                        navController.navigate(MovieScreens.MovieDetailScreen.name+"/${moviesList[index]}")
                     }
                 }
             }
