@@ -10,8 +10,8 @@ FilmFlow is a simple app built using Jetpack Compose that demonstrates the usage
 
 ## Screenshots
 
-<img src="https://github.com/ayush06092002/FilmFlow/assets/22142132/525f4d0b-a2a4-466e-a8ac-d7e41fd52668" alt="Screenshot 1" width="180" height="400" />
-<img src="https://github.com/ayush06092002/FilmFlow/assets/22142132/d8c7492b-d48d-4f94-b4dd-5a33235384bd" alt="Screenshot 2" width="180" height="400" />
+<img src="https://github.com/ayush06092002/FilmFlow/assets/22142132/525f4d0b-a2a4-466e-a8ac-d7e41fd52668" alt="Screenshot 1" width="250" height="555.56" />
+<img src="https://github.com/ayush06092002/FilmFlow/assets/22142132/d8c7492b-d48d-4f94-b4dd-5a33235384bd" alt="Screenshot 2" width="250" height="555.56" />
 
 
 ## Requirements
