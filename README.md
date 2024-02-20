@@ -17,8 +17,8 @@ FilmFlow is a simple app built using Jetpack Compose that demonstrates the usage
 ## Requirements
 
 - Android Studio Arctic Fox (2020.3.1) or later.
-- Android SDK version 31 or later.
-- Kotlin version 1.5.0 or later.
+- Android SDK version 29 or later.
+- Kotlin version 1.5.1 or later.
 
 ## Installation
 
