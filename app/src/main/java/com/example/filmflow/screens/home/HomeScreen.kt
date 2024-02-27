@@ -1,7 +1,6 @@
 package com.example.filmflow.screens.home
 
 import android.annotation.SuppressLint
-import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -19,8 +18,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.example.filmflow.CreateMovieList
+import com.example.filmflow.model.Movie
+import com.example.filmflow.model.getMovies
 import com.example.filmflow.navigation.MovieScreens
+import com.example.filmflow.widgets.CreateMovieList
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
@@ -33,7 +34,7 @@ fun HomeScreen(navController: NavController){
                 containerColor = Color(0xFFe3f09b)
             ),
                 title = {
-                    Text(text = "Top Bar",
+                    Text(text = "Film Flow",
                         style = TextStyle(color = Color.Black)
                     )
                 })
@@ -43,17 +44,7 @@ fun HomeScreen(navController: NavController){
     }
 }
 @Composable
-fun MainContent(navController: NavController,moviesList: List<String> = listOf(
-    "The Shawshank Redemption",
-    "The Godfather",
-    "The Dark Knight",
-    "The Godfather: Part II",
-    "12 Angry",
-    "Schindler's List",
-    "The Lord of the Rings: The Return of the King",
-    "Pulp Fiction",
-    "The Good, the Bad and the Ugly",
-)) {
+fun MainContent(navController: NavController,moviesList: List<Movie> = getMovies()) { //pass the context to getMovies
     Surface(modifier = Modifier.padding(top = 60.dp),
         color = Color(0xFF87b6a7)
     ) {
@@ -64,7 +55,7 @@ fun MainContent(navController: NavController,moviesList: List<String> = listOf(
             LazyColumn {
                 items(moviesList.size) { index ->
                     CreateMovieList(moviesList[index]) {
-                        navController.navigate(MovieScreens.MovieDetailScreen.name+"/${moviesList[index]}")
+                        navController.navigate(MovieScreens.MovieDetailScreen.name+"/${moviesList[index].plot}")
                     }
                 }
             }

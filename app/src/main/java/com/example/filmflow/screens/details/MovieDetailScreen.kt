@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.Button
@@ -53,7 +54,7 @@ fun MovieDetailScreen(navController: NavController, movieData: String?) {
             .fillMaxWidth()
             .fillMaxHeight(),
             color = Color(0xFF87b6a7)) {
-            Column(modifier = Modifier,
+            Column(modifier = Modifier.padding(10.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center) {
                 Text(text = movieData.toString(), style = MaterialTheme.typography.headlineMedium)
